@@ -2,20 +2,30 @@ const colors = ["blue", "green", "white"];
 
 // 1.  Using a forEach loop:
 //  - Log every color from the colors array to the console.
-
+colors.forEach(function(color){
+  console.log(color);
+});
 
 let nums = [35, 482, 201, 98];
 // 2. Using a forEach loop:
 //  - Find and print the sum of the nums array.
+nums.forEach(function(num){
+  console.log(num);
+});
 
 const cats = ["siamese", "calico", "persian", "scottish fold"];
 // 3. Using a for of loop:
 //  - Print the first letter of each cat to the console.
+for (let cat of cats) {
+  console.log(cat);
+}
 
 const primeNums = [2, 3, 5, 7, 11, 13, 17, 19, 23];
 // 4. Using a for of loop:
 //  - Calculate the square of every element in the primeNums array.
-
+for (let primeNum of primeNums){
+  console.log(primeNum * primeNum);
+}
 // 5. Using a for loop:
 //  - Iterate from 0 to 15.
 //  - For each iteration, it should check:
@@ -26,7 +36,13 @@ const primeNums = [2, 3, 5, 7, 11, 13, 17, 19, 23];
 //    "0 is even"
 //    "1 is odd"
 //    "2 is even"
-
+for (let i = 0; i < 16; i++){
+  if (i % 2 === 0){
+    console.log(i + " is even");
+  } else {
+    console.log(i + " is odd");
+  }
+}
 // 6. Using a for loop:
 //  - Iterate the integers from 1 to 15.
 //  - For multiples of three, print "Fizz" instead of the number
@@ -50,7 +66,17 @@ const primeNums = [2, 3, 5, 7, 11, 13, 17, 19, 23];
 //     14
 //     FizzBuzz
 //     -----
-
+for (let i = 1; i < 16; i++){
+  if (i % 3 === 0 && i % 5 === 0){
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0){
+    console.log("Fizz");
+  } else if (i % 5 === 0){
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
 // BONUS LOOPS!!
 // Write a JavaScript program to construct the following pattern,
 //    using a nested for loop.
@@ -61,7 +87,13 @@ const primeNums = [2, 3, 5, 7, 11, 13, 17, 19, 23];
 //     * * *
 //     * * * *
 //     * * * * *
-
+for(let i = 1; i < 6; i++){
+  let tempStr = "";
+  for(let j = 0; j < i; j++){
+    tempStr += "*";
+  }
+  console.log(tempStr);
+}
 // Write a function called doubleValues that takes an array
 //    as a parameter. The function should return a new array
 //    with all the values in the array doubled

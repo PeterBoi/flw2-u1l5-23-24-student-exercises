@@ -13,8 +13,11 @@ let horrorMovies = [
     "Night of the Living Dead"
   ];
 // 2. Use a for loop to display the first three items in the horrorMovies array to the console..
-
-
-
+for (let i = 0; i < 3; i++){
+  console.log(horrorMovies[i]);
+}
 
 // 3. Can you create a loop that only does the last three in the array? Try it out.
+for (let i = 3; i < 6; i++){
+  console.log(horrorMovies[i]);
+}
